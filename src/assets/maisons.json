@@ -1,0 +1,36 @@
+[
+  {
+    "favori": false,
+    "prix": 1500,
+    "nom": "Autre Maison",
+    "image": "/images-maisons/Faulkner-Ave.png",
+    "nbrLits": 2,
+    "nbrSDB": 1,
+    "surface": "4x5m²",
+    "adresse": {
+      "addressCountry": "USA",
+      "addressRegion": "TX",
+      "addressLocality": "Palm Habor",
+      "postOfficeBoxNumber": "123",
+      "streetAddress": "Lake Sevilla",
+      "postalCode": "2821"
+    }
+  },
+  {
+    "favori": true,
+    "prix": 3000,
+    "nom": "Beverly Springfield",
+    "image": "/images-maisons/Beverly-Springfield.jpg",
+    "nbrLits": 3,
+    "nbrSDB": 2,
+    "surface": "4x5m²",
+    "adresse": {
+      "addressCountry": "USA",
+      "addressRegion": "TX",
+      "addressLocality": "Palm Habor",
+      "postOfficeBoxNumber": "123",
+      "streetAddress": "Lake Sevilla",
+      "postalCode": "2821"
+    }
+  }
+]
