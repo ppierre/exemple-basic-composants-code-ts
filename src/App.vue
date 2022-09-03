@@ -14,6 +14,13 @@
     <li>
       <routerLink to="/liste-fetch">listing "dynamique" avec fetch</routerLink>
     </li>
+    <li>
+      Offres :
+      <ul>
+        <li><routerLink to="/offre/0">index : 0</routerLink></li>
+        <li><routerLink to="/offre/1">index : 1</routerLink></li>
+      </ul>
+    </li>
   </ul>
   <div class="p-2">
     <Suspense>
