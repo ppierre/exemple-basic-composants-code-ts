@@ -16,10 +16,10 @@
     </li>
   </ul>
   <div class="p-2">
-    <Suspense>
-      <routerView />
-      <template #fallback> Chargement... depuis "RouterView..." </template>
-    </Suspense>
+    <!-- <Suspense> -->
+    <routerView />
+    <!-- <template #fallback> Chargement... depuis "RouterView..." </template> -->
+    <!-- </Suspense> -->
   </div>
 </template>
 <script setup lang="ts"></script>
