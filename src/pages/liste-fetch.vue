@@ -2,7 +2,6 @@
 import FicheOffreMaison from "../components/FicheOffreMaison.vue";
 const res = await fetch("/maisons-public.json");
 const maisons = await res.json();
-debugger;
 </script>
 <template>
   <div class="p-2">
