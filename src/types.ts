@@ -2,7 +2,7 @@
  * TODO: https://schema.org/Apartment ou https://schema.org/Accommodation ?
  */
 export interface SchemaOffreMaison {
-  id: string; //TODO type uuid
+  id?: string; //TODO type uuid
   /** nom du logement */
   nom: string;
   prix: number;
