@@ -1,29 +1,10 @@
-# td-grp-b
+# vue3-ts-router-vite-page-tailwind-icon
 
-This template should help get you started developing with Vue 3 in Vite.
+# Projet basique Vue3/TypeScript/router/Vite/plugin-pages/Tailwind
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- [Installation de Vue avec Vite comme "build tool"](https://vuejs.org/guide/quick-start.html#with-build-tools)
+- [Vue router](https://router.vuejs.org/guide/)
+  - avec [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages#overview) pour générer automatiquement des routes pour les composant dans le dossier `src/pages`
+- [Tailwind](https://tailwindcss.com/docs/guides/vite)
+  - avec [plugin pour Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss#readme) pour trier les classes TW automatiquement.
+- [HeroIcons pour Vue 3](https://github.com/tailwindlabs/heroicons#vue)

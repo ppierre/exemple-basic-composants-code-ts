@@ -1,19 +1,25 @@
 {
-    "compilerOptions": {
-        "jsx": "preserve",
-        "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "./*"
-            ]
-        },
-        "types": [
-            "vite/client"
-        ]
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "exclude": [
-        "node_modules",
-        ".nuxt",
-        "dist"
+    "types": [
+      "vite/client",
+      "vite-plugin-pages/client"
     ]
+  },
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
 }
