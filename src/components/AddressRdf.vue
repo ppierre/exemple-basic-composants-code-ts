@@ -13,7 +13,7 @@
 </template>
 <script setup lang="ts">
 defineProps({
-  addr: Object,
+  addr: null,
   short: Boolean,
 });
 </script>
