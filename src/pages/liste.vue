@@ -6,6 +6,8 @@ import maisons from "../assets/maisons.json";
 </script>
 <template>
   <div class="p-2">
+    <!-- <FicheOffreMaison v-bind="maisons[0]" />
+    <FicheOffreMaison v-bind="maisons[1]" /> -->
     <FicheOffreMaison
       v-for="maison in maisons"
       :key="maison.nom"
