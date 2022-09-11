@@ -18,7 +18,7 @@ defineProps({
   nbrLits: Number,
   /** nombre de salle de bain du logement */
   nbrSDB: Number,
-  adresse: Object,
+  adresse: String,
   /** Surface habitable TODO: https://schema.org/floorSize ? */
   surface: String,
 });
@@ -36,7 +36,7 @@ defineProps({
         <Heart :class="{ 'fill-red-300': favori }" />
       </div>
       <h3 class="text-2xl text-gray-900">{{ nom }}</h3>
-      <AddressRdf class="not-italic text-gray-500" :addr="adresse" short />
+      <address>{{ adresse }}</address>
       <div class="order-first flex items-center">
         <div class="pr-1 text-2xl font-bold text-indigo-500">${{ prix }}</div>
         <div>/ months</div>

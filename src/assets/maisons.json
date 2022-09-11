@@ -7,14 +7,7 @@
     "nbrLits": 2,
     "nbrSDB": 1,
     "surface": "4x5m²",
-    "adresse": {
-      "addressCountry": "USA",
-      "addressRegion": "TX",
-      "addressLocality": "Palm Habor",
-      "postOfficeBoxNumber": "123",
-      "streetAddress": "Lake Sevilla",
-      "postalCode": "2821"
-    }
+    "adresse": "2821 Lake Sevilla, Palm Habor, TX"
   },
   {
     "favori": true,
@@ -24,13 +17,6 @@
     "nbrLits": 3,
     "nbrSDB": 2,
     "surface": "4x5m²",
-    "adresse": {
-      "addressCountry": "USA",
-      "addressRegion": "TX",
-      "addressLocality": "Palm Habor",
-      "postOfficeBoxNumber": "123",
-      "streetAddress": "Lake Sevilla",
-      "postalCode": "2821"
-    }
+    "adresse": "2821 Lake Sevilla, Palm Habor, TX"
   }
 ]

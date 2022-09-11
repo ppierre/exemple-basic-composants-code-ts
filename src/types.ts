@@ -12,7 +12,8 @@ export interface SchemaOffreMaison {
   nbrLits: number;
   /** nombre de salle de bain du logement */
   nbrSDB: number;
-  adresse: PostalAddress;
+  // adresse: PostalAddress;
+  adresse: string;
   /** Surface habitable TODO: https://schema.org/floorSize ? */
   surface: string;
 }
