@@ -21,6 +21,14 @@
         <li><routerLink to="/offre/1">index : 1</routerLink></li>
       </ul>
     </li>
+    <li>
+      Edition :
+      <ul>
+        <li><routerLink to="/edit/new">Nouvelle offre</routerLink></li>
+        <li><routerLink to="/edit/0">édition offre 0</routerLink></li>
+        <li><routerLink to="/edit/1">édition offre 1</routerLink></li>
+      </ul>
+    </li>
   </ul>
   <div class="p-2">
     <Suspense>
