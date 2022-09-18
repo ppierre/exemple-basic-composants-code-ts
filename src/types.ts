@@ -4,12 +4,12 @@
 export interface SchemaOffreMaison {
   id?: string; //TODO type uuid
   /** nom du logement */
-  nom: string;
+  nomMaison: string;
   prix: number;
   favori: boolean;
   image: string;
   /** nombre de lits du logement */
-  nbrLits: number;
+  nbrChambres: number;
   /** nombre de salle de bain du logement */
   nbrSDB: number;
   // adresse: PostalAddress;

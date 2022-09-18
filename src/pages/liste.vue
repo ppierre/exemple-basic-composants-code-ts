@@ -10,7 +10,7 @@ import maisons from "../assets/maisons.json";
     <FicheOffreMaison v-bind="maisons[1]" /> -->
     <FicheOffreMaison
       v-for="maison in maisons"
-      :key="maison.nom"
+      :key="maison.nomMaison"
       v-bind="maison"
     />
   </div>

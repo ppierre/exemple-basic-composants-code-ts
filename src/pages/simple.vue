@@ -5,7 +5,7 @@
     <ficheMaison
       surface="8x4.5m²"
       :nbr-lits="4"
-      nom="autre maison"
+      nomMaison="autre maison"
       :nbr-s-d-b="2"
       :prix="5000"
       :favori="true"
@@ -33,9 +33,9 @@ const maison1 = {
   prix: 2701,
   image: imageMaison1,
   favori: true,
-  nbrLits: 4,
+  nbrChambres: 4,
   nbrSDB: 2,
-  nom: "Beverly Springfield",
+  nomMaison: "Beverly Springfield",
   adresse: {
     addressCountry: "USA",
     addressRegion: "TX",

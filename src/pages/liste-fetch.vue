@@ -7,7 +7,7 @@ const maisons = await res.json();
   <div class="p-2">
     <FicheOffreMaison
       v-for="maison in maisons"
-      :key="maison.nom"
+      :key="maison.nomMaison"
       v-bind="maison"
     />
   </div>

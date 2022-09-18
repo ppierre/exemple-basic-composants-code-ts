@@ -10,12 +10,12 @@ import AddressRdf from "./AddressRdf.vue";
 defineProps({
   id: String, //TODO type uuid
   /** nom du logement */
-  nom: String,
+  nomMaison: String,
   prix: Number,
   favori: Boolean,
   image: String,
   /** nombre de lits du logement */
-  nbrLits: Number,
+  nbrChambres: Number,
   /** nombre de salle de bain du logement */
   nbrSDB: Number,
   adresse: String,
@@ -35,7 +35,7 @@ defineProps({
       >
         <Heart :class="{ 'fill-red-300': favori }" />
       </div>
-      <h3 class="text-2xl text-gray-900">{{ nom }}</h3>
+      <h3 class="text-2xl text-gray-900">{{ nomMaison }}</h3>
       <address>{{ adresse }}</address>
       <div class="order-first flex items-center">
         <div class="pr-1 text-2xl font-bold text-indigo-500">${{ prix }}</div>
@@ -43,7 +43,7 @@ defineProps({
       </div>
       <hr class="my-4 border-t-2 border-indigo-100" />
       <div class="flex justify-between text-sm text-gray-500">
-        <div><Bed class="inline-block pr-1" />{{ nbrLits }}&nbsp;Beds</div>
+        <div><Bed class="inline-block pr-1" />{{ nbrChambres }}&nbsp;Beds</div>
         <div><Bath class="inline-block pr-1" />{{ nbrSDB }} Bathrooms</div>
         <div><Size class="inline-block pr-1" />{{ surface }}</div>
       </div>
