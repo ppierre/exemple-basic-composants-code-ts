@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import { ref } from "@vue/reactivity";
+import { supabase } from "../supabase";
 import FicheOffreMaison from "./FicheOffreMaison.vue";
 // On fait une variable réactive qui réference les données
 // ATTENTION : faire une Ref pas une Reactive car :
 // c'est l'objet qui doit être réactif, pas ses props
 const maison = ref({});
+async function upsertMaison(dataForm, node) {
+  const { data, error } = await supabase.from("Maison").upsert(dataForm);
+  if (error) node.setErrors([error.message]);
+  // else {
+  //   router.push({ name: "edit-maison-id", params: { id: data[0].id } });
+  // }
+}
 </script>
 <template>
   <div>
@@ -25,15 +33,15 @@ const maison = ref({});
           },
         }"
         :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
+        @submit="upsertMaison"
       >
-        <FormKit name="nom" label="nom" />
+        <FormKit name="nomMaison" label="nom" />
         <FormKit name="prix" label="prix" type="number" />
-        <FormKit
-          name="favori"
-          label="mettre en valeur"
-          type="checkbox"
-          wrapper-class="flex"
-        />
+        <FormKit name="surface" label="surface" />
+        <FormKit name="nbrChambres" label="nbr de chambres" type="number" />
+        <FormKit name="nbrSDB" label="nbr de SDB" type="number" />
+        <FormKit name="adresse" label="adresse" />
+        <FormKit name="image" label="image" />
       </FormKit>
     </div>
   </div>
