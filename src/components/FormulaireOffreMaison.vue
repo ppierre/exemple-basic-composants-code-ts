@@ -15,8 +15,9 @@ if (props.id) {
     .from("Maison")
     .select("*")
     .eq("id", props.id);
-  if (error) console.log("n'a pas pu charger le table Maison :", error);
-  else maison.value = (data as any[])[0];
+  if (error || !data)
+    console.log("n'a pas pu charger le table Maison :", error);
+  else maison.value = data[0];
 }
 async function upsertMaison(dataForm, node) {
   const { data, error } = await supabase.from("Maison").upsert(dataForm);
