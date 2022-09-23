@@ -4,7 +4,7 @@ import { supabase } from "../supabase";
 import FicheOffreMaison from "./FicheOffreMaison.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-// On fait une variable réactive qui réference les données
+// On fait une variable réactive qui référence les données
 // ATTENTION : faire une Ref pas une Reactive car :
 // c'est l'objet qui doit être réactif, pas ses props
 const maison = ref({});
