@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import groupBy from "lodash/groupBy";
 import { ref } from "@vue/reactivity";
 import { supabase } from "../supabase";
 import FicheOffreMaison from "./FicheOffreMaison.vue";
@@ -27,6 +28,10 @@ async function upsertMaison(dataForm, node) {
     router.push({ name: "edit-id", params: { id: data[0].id } });
   }
 }
+const { data: dataQuartierCommune, error } = await supabase
+  .from("quartiercommune")
+  .select("*");
+if (error) console.log("n'a pas pu charger la vue quartiercommune :", error);
 </script>
 <template>
   <div>
@@ -56,6 +61,24 @@ async function upsertMaison(dataForm, node) {
         <FormKit name="nbrSDB" label="nbr de SDB" type="number" />
         <FormKit name="adresse" label="adresse" />
         <FormKit name="image" label="image" />
+        <FormKit name="code_Quartier" label="Quartier" type="select">
+          <option value="" :disabled="true">Choisir un quartier</option>
+          <optgroup
+            v-for="(listeQuartier, libelleCommune) in groupBy(
+              dataQuartierCommune,
+              'libelle_Commune'
+            )"
+            :label="`Commune : ${libelleCommune}`"
+          >
+            <option
+              v-for="quartier in listeQuartier"
+              :key="quartier.code_Quartier"
+              :value="quartier.code_Quartier"
+            >
+              {{ quartier.libelle_Quartier }}
+            </option>
+          </optgroup>
+        </FormKit>
       </FormKit>
     </div>
   </div>
