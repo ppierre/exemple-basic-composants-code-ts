@@ -26,14 +26,8 @@
         <li><routerLink to="/offre/1">index : 1</routerLink></li>
       </ul>
     </li>
-    <li>
-      Edition :
-      <ul>
-        <li><routerLink to="/edit/new">Nouvelle offre</routerLink></li>
-        <li><routerLink to="/edit/0">édition offre 0</routerLink></li>
-        <li><routerLink to="/edit/1">édition offre 1</routerLink></li>
-      </ul>
-    </li>
+    <li><routerLink to="/edit/new">Edition :Nouvelle offre</routerLink></li>
+    <li><routerLink to="/quartier">Liste des quartiers</routerLink></li>
     <li>
       <router-link class="text-red-600 underline" to="/login-logout">
         Login/logout
