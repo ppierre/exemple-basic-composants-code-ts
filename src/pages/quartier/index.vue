@@ -14,13 +14,17 @@ if (error) console.log("n'a pas pu charger la table quartiercommune :", error);
         data,
         'libelle_Commune'
       )"
+      :key="libelleCommune"
     >
       <DisclosureButton class="py-2">
         {{ libelleCommune }}
       </DisclosureButton>
       <DisclosurePanel class="text-gray-500">
         <ul>
-          <li v-for="quartierObject in (listeQuartier as any[])">
+          <li
+            v-for="quartierObject in listeQuartier"
+            :key="quartierObject.code_Quartier"
+          >
             <RouterLink
               :to="{
                 name: 'quartier-id',
