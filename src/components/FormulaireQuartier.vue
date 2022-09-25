@@ -26,10 +26,12 @@ async function upsertQuartierCommune(dataForm, node) {
     router.push({ name: "quartier-id", params: { id: data[0].code_Quartier } });
   }
 }
+// Charger les données des communes
 const { data: listeCommune, error } = await supabase
   .from("Commune")
   .select("*");
 if (error) console.log("n'a pas pu charger la table Commune :", error);
+// Les convertir par `map` en un tableau d'objets {value, label} pour FormKit
 const optionsCommune = listeCommune?.map((commune) => ({
   value: commune.code_Commune,
   label: commune.libelle_Commune,
@@ -44,6 +46,7 @@ const optionsCommune = listeCommune?.map((commune) => ({
       v-model="quartierObject"
     >
       <FormKit name="libelle_Quartier" label="Nom du quartier" />
+      <!-- Affiche les communes avec comme valeur l'id de la relation -->
       <FormKit
         type="select"
         name="code_Commune"
